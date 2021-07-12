@@ -7,7 +7,12 @@ body {
 h1{
     color:grey;
     font-family: sans-serif;
-    padding-left: 5%;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: 10%;
+    margin-right: 10%;    
 }
 
 .main {
@@ -23,6 +28,21 @@ h1{
     font-family: sans-serif;
     margin-top: 2%;
     margin-bottom: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5em;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-items: center;
+}
+
+.cal {
+    color: black;
+    font-family: sans-serif;
+    margin-top: 2%;
+    margin-bottom: 4%;
     margin-left: 20%;
     margin-right: 20%;
     border-radius: 5em;
@@ -31,4 +51,5 @@ h1{
     padding-top: 5%;
     padding-bottom: 5%;
     align-items: center;
+
 }
