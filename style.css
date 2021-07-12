@@ -1,25 +1,26 @@
-
-
 body {
     background-color:black;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     align-items: center;
-
 }
 h1{
     color:grey;
-    font-family: 'Times New Roman', Times, serif;
-
+    font-family: sans-serif;
     padding-left: 5%;
-
 }
 
+.main {
+    width: 60%;
+    margin: 24% auto;
+    position: relative;
+
+}
 
 .calculator {
     background-color: white;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     margin-top: 2%;
     margin-bottom: 4%;
     margin-left: 20%;
@@ -30,9 +31,4 @@ h1{
     padding-top: 5%;
     padding-bottom: 5%;
     align-items: center;
-
 }
-
-
-
-

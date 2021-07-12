@@ -1,12 +1,36 @@
-function compute() {
-    document.getElementById("principal").innerHTML= "If you deposit!!!" + principal +",";
+window.addEventListener('DOMContentLoaded', () => {
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("value");
 
-    p=document.getElementById("principal").value;
-    r=document.getElementById("rate").value;
-    n=document.getElementById("years").value;
-    result=document.getElementById("result");
-    result.innerHTML="You will receive an amount of " + (p*n*r/100) + ",";
+  output.innerHTML = slider.value;
 
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  } 
+})
+
+function getFutureValue(principal, interestRatePercent, termYears) {
+  return principal*interestRatePercent*termYears/100;
 }
 
+function showResult(result) { 
+  document.getElementById("result").innerHTML = result;
+}
+
+function compute() {
+  // Ensure all values are _numbers_
+  p = Number(document.getElementById("principal").value);
+  r = Number(document.getElementById("myRange").value);
+  n = Number(document.getElementById("years").value);
+ 
+  const newDate = new Date();
+  newDate.setFullYear(newDate.getFullYear() + n);
+  let result = "If you deposit " + p + ", " + "<br>" ;
+  result += "at an interest rate of " + r + "%," + "<br>";
+  result += "you will receive an amount of " + getFutureValue(p, r, n).toFixed(2) + "," + "<br>";
+  result += "in the year " + (newDate.getFullYear());
+  showResult(result);
+
+}
+compute()
 
