@@ -1,20 +1,26 @@
 window.addEventListener('DOMContentLoaded', () => {
   var slider = document.getElementById("myRange");
   var output = document.getElementById("value");
+  var principal_p = document.getElementById("result");
+  
+  principal_p.classList.add("highlight");
 
   output.innerHTML = slider.value;
 
   slider.oninput = function() {
     output.innerHTML = this.value;
+
+  principal_p.classList.add("highlight");
   } 
 })
 
 function validate(){  
   var num = document.myform.num.value;  
-  if (isNaN(num)){  
-    document.getElementById("principal").innerHTML="Enter Numeric value only";  
-    return false;  
-  }else{  
+  if (isNaN(num) || num == 0 || num < 0) {  
+    alert("Please enter a valid entry")
+    //document.getElementById("principal").innerHTML="Enter Numeric value only";  
+    return false; }
+  else {  
     return true;  
     }  
   }  
@@ -43,4 +49,3 @@ function compute() {
 
 }
 compute()
-
