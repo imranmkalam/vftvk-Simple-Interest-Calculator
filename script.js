@@ -9,6 +9,16 @@ window.addEventListener('DOMContentLoaded', () => {
   } 
 })
 
+function validate(){  
+  var num = document.myform.num.value;  
+  if (isNaN(num)){  
+    document.getElementById("principal").innerHTML="Enter Numeric value only";  
+    return false;  
+  }else{  
+    return true;  
+    }  
+  }  
+
 function getFutureValue(principal, interestRatePercent, termYears) {
   return principal*interestRatePercent*termYears/100;
 }
