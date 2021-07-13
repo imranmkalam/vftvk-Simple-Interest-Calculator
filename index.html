@@ -16,7 +16,18 @@
             <br>
             Interest Rate   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <input type="range" min="1.0" max="15.0" step="0.1" value="5.0" id="myRange" class="slider" id="value"><text id="value"> </text> % </br>
             <br>
-            No. of Years   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;           <input type="number" min="1" max="10" step="1" id="years">  <br/>
+            No. of Years   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;           <select name="years" id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>  <br/>
             <br>
             <button onclick="compute()">Compute Interest</button>
             <p id="result"></p>        
