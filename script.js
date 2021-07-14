@@ -2,25 +2,23 @@ window.addEventListener('DOMContentLoaded', () => {
    
   var slider = document.getElementById("myRange");
   var output = document.getElementById("value");
-
+  
   output.innerHTML = slider.value;
-
   slider.oninput = function() {
     output.innerHTML = this.value;
   } 
 })
-
 document.getElementById("principal").addEventListener('change',function(event){
   event.preventDefault();
-  validate();
-});
+   validate();
+ });
 
-function validate(){  
+function validate() {  
   var num = document.myform.num.value;  
   if (isNaN(num) || num == 0 || num < 0 || num == null) {  
-    alert("Please enter a valid entry")
-    document.getElementById("principal").focus(); }
-  else {  
+    return false;
+  }
+  else { 
     return true;  
     }  
   } 
@@ -34,6 +32,13 @@ function showResult(result) {
 }
 
 function compute() {
+  var isInputValid = validate();
+  if (!isInputValid) {
+    alert("Please enter a valid entry")
+    document.getElementById("principal").focus();
+    return;
+  }; 
+
   // Ensure all values are _numbers_
   p = Number(document.getElementById("principal").value);
   r = Number(document.getElementById("myRange").value);
