@@ -1,4 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
+  
+  document.getElementById("principal").addEventListener('change',function(event){
+    event.preventDefault();
+    validate();
+  });
+   
   var slider = document.getElementById("myRange");
   var output = document.getElementById("value");
 
@@ -6,7 +12,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   slider.oninput = function() {
     output.innerHTML = this.value;
-
   } 
 })
 
@@ -14,12 +19,11 @@ function validate(){
   var num = document.myform.num.value;  
   if (isNaN(num) || num == 0 || num < 0 || num == null) {  
     alert("Please enter a valid entry")
-    //document.getElementById("principal").innerHTML="Enter Numeric value only";  
-    return false; }
+    document.getElementById("principal").focus(); }
   else {  
     return true;  
     }  
-  }  
+  } 
 
 function getFutureValue(principal, interestRatePercent, termYears) {
   return principal*interestRatePercent*termYears/100;
@@ -44,4 +48,5 @@ function compute() {
   showResult(result);
 
 }
+
 compute()
