@@ -1,9 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-  
-  document.getElementById("principal").addEventListener('change',function(event){
-    event.preventDefault();
-    validate();
-  });
    
   var slider = document.getElementById("myRange");
   var output = document.getElementById("value");
@@ -14,6 +9,11 @@ window.addEventListener('DOMContentLoaded', () => {
     output.innerHTML = this.value;
   } 
 })
+
+document.getElementById("principal").addEventListener('change',function(event){
+  event.preventDefault();
+  validate();
+});
 
 function validate(){  
   var num = document.myform.num.value;  
